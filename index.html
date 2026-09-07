@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CobraTaxi Cambodia — Hero Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-device="phone" data-hero="1">
+    <div class="studio" aria-label="Prototype controls">
+      <div class="studio__bar">
+        <div class="device-toggle" role="group" aria-label="Preview device">
+          <button type="button" class="device-toggle__btn is-active" data-device-btn="phone">
+            <span class="device-toggle__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="7" y="2" width="10" height="20" rx="2.5" stroke="currentColor" stroke-width="1.6" />
+                <path d="M10 18.5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </span>
+            Phone
+          </button>
+          <button type="button" class="device-toggle__btn" data-device-btn="desktop">
+            <span class="device-toggle__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="2.5" y="4" width="19" height="13" rx="2" stroke="currentColor" stroke-width="1.6" />
+                <path d="M8 20h8M12 17v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </span>
+            Desktop
+          </button>
+        </div>
+
+        <div class="style-switcher" role="group" aria-label="Hero style">
+          <button type="button" class="style-switcher__arrow" data-hero-prev aria-label="Previous hero style">
+            ‹
+          </button>
+          <div class="style-switcher__meta">
+            <p class="style-switcher__hint">Hero styles</p>
+            <p class="style-switcher__label">
+              Style <span data-hero-current>1</span> of 3
+            </p>
+            <div class="style-switcher__dots" aria-hidden="true">
+              <button type="button" class="dot is-active" data-hero-dot="1" aria-label="Hero style 1"></button>
+              <button type="button" class="dot" data-hero-dot="2" aria-label="Hero style 2"></button>
+              <button type="button" class="dot" data-hero-dot="3" aria-label="Hero style 3"></button>
+            </div>
+          </div>
+          <button type="button" class="style-switcher__arrow" data-hero-next aria-label="Next hero style">
+            ›
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="device-shell">
+        <div class="device-shell__notch" aria-hidden="true"></div>
+        <div class="device-shell__screen">
+          <div class="heroes" data-heroes>
+            <!-- Style 1: warm professional — beauty of places first -->
+            <section class="hero hero--style-1 is-active" data-hero-panel="1" aria-label="Hero style 1">
+              <header class="site-header">
+                <a href="#" class="logo logo--cobra" aria-label="CobraTaxi Cambodia home">CobraTaxi</a>
+                <nav class="desktop-nav" aria-label="Primary">
+                  <a href="#destinations">Places</a>
+                  <a href="#cta">Taxi</a>
+                  <a href="#cta">Tours</a>
+                </nav>
+                <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </header>
+
+              <div class="mobile-menu" hidden>
+                <a href="#destinations">Places</a>
+                <a href="#cta">Taxi Service</a>
+                <a href="#cta">Tour Guide</a>
+                <a href="#cta" class="mobile-menu__cta">Book a Ride</a>
+              </div>
+
+              <div class="hero__media" aria-hidden="true">
+                <img
+                  src="assets/cambodia/angkor-hero.jpg"
+                  alt=""
+                  class="hero__image"
+                />
+                <div class="hero__fade"></div>
+              </div>
+
+              <div class="hero__flag hero__flag--kh" title="Cambodia" aria-label="Cambodia">
+                <span class="hero__flag-blue"></span>
+                <span class="hero__flag-red"></span>
+                <span class="hero__flag-blue"></span>
+              </div>
+
+              <div class="hero__content">
+                <div class="destinations" id="destinations">
+                  <p class="destinations__label">Popular Places</p>
+
+                  <div class="carousel" data-carousel>
+                    <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous destination">
+                      ‹
+                    </button>
+
+                    <div class="carousel__track" data-track>
+                      <article class="dest-card" data-index="0">
+                        <img
+                          src="assets/cambodia/kompong-som-beach.jpg"
+                          alt="Beach near Kompong Som"
+                        />
+                        <h3>Kompong Som</h3>
+                      </article>
+
+                      <article class="dest-card dest-card--active" data-index="1">
+                        <img
+                          src="assets/cambodia/angkor-hero.jpg"
+                          alt="Angkor Wat in Siem Reap"
+                        />
+                        <h3>Siem Reap</h3>
+                      </article>
+
+                      <article class="dest-card" data-index="2">
+                        <img
+                          src="assets/cambodia/phnom-penh-palace.jpg"
+                          alt="Phnom Penh Independence Monument area"
+                        />
+                        <h3>Phnom Penh</h3>
+                      </article>
+                    </div>
+
+                    <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next destination">
+                      ›
+                    </button>
+                  </div>
+                </div>
+
+                <div class="hero__copy" id="story">
+                  <h1>Discover the Living Beauty of Cambodia</h1>
+                  <p>
+                    From Angkor’s temples to the coast of Kompong Som — see the places
+                    first, then ride with a local you can trust.
+                  </p>
+
+                  <div class="hero__actions" id="cta">
+                    <a href="#destinations" class="btn btn--primary">Explore Places</a>
+                    <a href="#cta" class="btn btn--ghost">Book a Taxi</a>
+                  </div>
+                </div>
+              </div>
+
+              <button class="fab" type="button" aria-label="Quick action">+</button>
+            </section>
+
+            <!-- Style 2: memory scatter — Cambodia moments -->
+            <section class="hero hero--style-2" data-hero-panel="2" aria-label="Hero style 2" hidden>
+              <header class="site-header site-header--light">
+                <a href="#" class="logo logo--cobra" aria-label="CobraTaxi Cambodia home">CobraTaxi</a>
+                <nav class="desktop-nav" aria-label="Primary">
+                  <a href="#memory-cta">Places</a>
+                  <a href="#memory-cta">Taxi</a>
+                  <a href="#memory-cta">Tours</a>
+                </nav>
+                <button class="menu-btn menu-btn--light" type="button" aria-label="Open menu" aria-expanded="false">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </header>
+
+              <div class="mobile-menu mobile-menu--light" hidden>
+                <a href="#memory-cta">Places</a>
+                <a href="#memory-cta">Taxi Service</a>
+                <a href="#memory-cta">Tour Guide</a>
+                <a href="#memory-cta" class="mobile-menu__cta">Book a Ride</a>
+              </div>
+
+              <div class="memory">
+                <div class="memory__field" aria-hidden="true">
+                  <figure class="memory-card" style="--x: 4%; --y: 8%; --r: -11deg; --w: 7.2rem; --delay: 0.05s">
+                    <img src="assets/cambodia/angkor-hero.jpg" alt="" />
+                    <figcaption>Angkor Wat</figcaption>
+                  </figure>
+
+                  <figure class="memory-card memory-card--hide-sm" style="--x: 70%; --y: 5%; --r: 9deg; --w: 6.4rem; --delay: 0.12s">
+                    <img src="assets/cambodia/taprohm.jpg" alt="" />
+                    <figcaption>Ta Prohm</figcaption>
+                  </figure>
+
+                  <figure class="memory-card" style="--x: 76%; --y: 22%; --r: -7deg; --w: 7.6rem; --delay: 0.18s">
+                    <img src="assets/cambodia/kompong-som-beach.jpg" alt="" />
+                    <figcaption>Kompong Som</figcaption>
+                  </figure>
+
+                  <figure class="memory-card memory-card--hide-sm" style="--x: 2%; --y: 30%; --r: 8deg; --w: 6.8rem; --delay: 0.24s">
+                    <img src="assets/cambodia/phnom-penh-palace.jpg" alt="" />
+                    <figcaption>Phnom Penh</figcaption>
+                  </figure>
+
+                  <figure class="memory-card" style="--x: 3%; --y: 62%; --r: -8deg; --w: 7.2rem; --delay: 0.3s">
+                    <img src="assets/cambodia/angkor-path.jpg" alt="" />
+                    <figcaption>Temple path</figcaption>
+                  </figure>
+
+                  <figure class="memory-card" style="--x: 72%; --y: 60%; --r: 12deg; --w: 6.6rem; --delay: 0.36s">
+                    <img src="assets/cambodia/kompong-som-kayak.jpg" alt="" />
+                    <figcaption>Coast</figcaption>
+                  </figure>
+
+                  <figure class="memory-card memory-card--hide-sm" style="--x: 16%; --y: 80%; --r: 6deg; --w: 7rem; --delay: 0.42s">
+                    <img src="assets/cambodia/siem-reap-water.jpg" alt="" />
+                    <figcaption>Siem Reap</figcaption>
+                  </figure>
+
+                  <figure class="memory-card" style="--x: 58%; --y: 78%; --r: -10deg; --w: 7.4rem; --delay: 0.48s">
+                    <img src="assets/cambodia/temple-gate.jpg" alt="" />
+                    <figcaption>Ancient gate</figcaption>
+                  </figure>
+                </div>
+
+                <div class="memory__copy">
+                  <p class="memory__eyebrow">Moments on the road</p>
+                  <h1>Cambodia, one ride at a time</h1>
+                  <p>
+                    Temple mornings, coastal evenings, city transfers — real places
+                    first. Then a personal driver who knows the way.
+                  </p>
+                  <div class="hero__actions" id="memory-cta">
+                    <a href="#memory-cta" class="btn btn--primary">See Places</a>
+                    <a href="#memory-cta" class="btn btn--ghost">Request a Guide</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Style 3: serious editorial — trust & personal service -->
+            <section class="hero hero--style-3" data-hero-panel="3" aria-label="Hero style 3" hidden>
+              <div class="serious__media" aria-hidden="true">
+                <img
+                  src="assets/cambodia/angkor-hero.jpg"
+                  alt=""
+                  class="serious__image"
+                />
+                <div class="serious__veil"></div>
+                <div class="serious__grain"></div>
+              </div>
+
+              <p class="serious__watermark" aria-hidden="true">Cambodia</p>
+              <div class="serious__marks" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+
+              <header class="site-header site-header--serious">
+                <a href="#" class="logo logo--cobra" aria-label="CobraTaxi Cambodia home">CobraTaxi</a>
+                <nav class="desktop-nav" aria-label="Primary">
+                  <a href="#serious-cta">Places</a>
+                  <a href="#serious-cta">Taxi</a>
+                  <a href="#serious-cta">Tours</a>
+                </nav>
+                <a href="#serious-cta" class="serious-nav-cta">Book</a>
+                <button class="menu-btn menu-btn--sharp" type="button" aria-label="Open menu" aria-expanded="false">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </header>
+
+              <div class="mobile-menu" hidden>
+                <a href="#serious-cta">Places</a>
+                <a href="#serious-cta">Taxi Service</a>
+                <a href="#serious-cta">Tour Guide</a>
+                <a href="#serious-cta" class="mobile-menu__cta mobile-menu__cta--sharp">Book a Ride</a>
+              </div>
+
+              <div class="serious__stage">
+                <div class="serious__content">
+                  <div class="serious__kicker">
+                    <span class="serious__rule" aria-hidden="true"></span>
+                    <p class="serious__eyebrow">Personal taxi &amp; tour guide · Cambodia</p>
+                  </div>
+
+                  <h1>
+                    Ride with
+                    <em>experience</em>
+                    you can trust
+                  </h1>
+
+                  <ul class="serious__meta">
+                    <li>Airport transfers</li>
+                    <li>Temple days</li>
+                    <li>Coastal trips</li>
+                  </ul>
+
+                  <p class="serious__lede">
+                    A personal service — not a big company. Years on Cambodia’s roads,
+                    guiding foreigners with clear prices and calm local knowledge.
+                  </p>
+
+                  <div class="serious__actions" id="serious-cta">
+                    <a href="#serious-cta" class="btn-sharp btn-sharp--solid">Book a Taxi</a>
+                    <a href="#serious-cta" class="btn-sharp btn-sharp--ghost">Ask for Tour Guide</a>
+                  </div>
+                </div>
+
+                <aside class="serious__feature">
+                  <figure class="serious__frame">
+                    <img
+                      src="assets/cambodia/taprohm.jpg"
+                      alt="Ta Prohm temple in Angkor"
+                    />
+                    <figcaption>
+                      <span>Signature route</span>
+                      <strong>Siem Reap · Angkor</strong>
+                    </figcaption>
+                  </figure>
+                  <p class="serious__quote">
+                    “I show you Cambodia’s beauty first — then I take you there safely,
+                    as your driver and guide.”
+                  </p>
+                </aside>
+              </div>
+
+              <div class="serious__bar">
+                <p>cobrataxicambodia.com · Personal service</p>
+                <div class="serious__stats">
+                  <span><b>1</b> trusted driver</span>
+                  <span><b>3</b> key places</span>
+                  <span><b>Taxi</b> + guide</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="device-shell__home" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <button type="button" class="edge-nav edge-nav--prev" data-hero-prev aria-label="Previous hero style">
+      <span>‹</span>
+      <small>Prev style</small>
+    </button>
+    <button type="button" class="edge-nav edge-nav--next" data-hero-next aria-label="Next hero style">
+      <span>›</span>
+      <small>Next style</small>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
