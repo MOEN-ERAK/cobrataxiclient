@@ -63,10 +63,10 @@
         <div class="device-shell__notch" aria-hidden="true"></div>
         <div class="device-shell__screen">
           <div class="heroes" data-heroes>
-            <!-- Style 1: warm professional — beauty of places first -->
+            <!-- Style 1: warm professional — places first, taxi service cues -->
             <section class="hero hero--style-1 is-active" data-hero-panel="1" aria-label="Hero style 1">
               <header class="site-header">
-                <a href="#" class="logo logo--cobra" aria-label="CobraTaxi Cambodia home">CobraTaxi</a>
+                <a href="#" class="wordmark" aria-label="CobraTaxi home">CobraTaxi</a>
                 <nav class="desktop-nav" aria-label="Primary">
                   <a href="#destinations">Places</a>
                   <a href="#cta">Taxi</a>
@@ -83,7 +83,7 @@
                 <a href="#destinations">Places</a>
                 <a href="#cta">Taxi Service</a>
                 <a href="#cta">Tour Guide</a>
-                <a href="#cta" class="mobile-menu__cta">Book a Ride</a>
+                <a href="#cta" class="mobile-menu__cta">Book a Taxi</a>
               </div>
 
               <div class="hero__media" aria-hidden="true">
@@ -103,7 +103,7 @@
 
               <div class="hero__content">
                 <div class="destinations" id="destinations">
-                  <p class="destinations__label">Popular Places</p>
+                  <p class="destinations__label">Popular places · taxi routes</p>
 
                   <div class="carousel" data-carousel>
                     <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous destination">
@@ -116,6 +116,9 @@
                           src="assets/cambodia/kompong-som-beach.jpg"
                           alt="Beach near Kompong Som"
                         />
+                        <div class="dest-card__badge" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="none"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11M8.5 17.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm7 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        </div>
                         <h3>Kompong Som</h3>
                       </article>
 
@@ -124,6 +127,9 @@
                           src="assets/cambodia/angkor-hero.jpg"
                           alt="Angkor Wat in Siem Reap"
                         />
+                        <div class="dest-card__badge" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="none"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11M8.5 17.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm7 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        </div>
                         <h3>Siem Reap</h3>
                       </article>
 
@@ -132,6 +138,9 @@
                           src="assets/cambodia/phnom-penh-palace.jpg"
                           alt="Phnom Penh Independence Monument area"
                         />
+                        <div class="dest-card__badge" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="none"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11M8.5 17.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm7 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        </div>
                         <h3>Phnom Penh</h3>
                       </article>
                     </div>
@@ -143,26 +152,46 @@
                 </div>
 
                 <div class="hero__copy" id="story">
-                  <h1>Discover the Living Beauty of Cambodia</h1>
+                  <ul class="service-pills" aria-label="Main services">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                      Taxi
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
+                      City transfers
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.5 0-6.5 1.8-6.5 4v1.5h13V18c0-2.2-3-4-6.5-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                      Tour guide
+                    </li>
+                  </ul>
+
+                  <h1>Discover Cambodia — then ride with a local</h1>
                   <p>
-                    From Angkor’s temples to the coast of Kompong Som — see the places
-                    first, then ride with a local you can trust.
+                    Beautiful places first. Private taxi and guided tours when you’re
+                    ready to move — airport, temples, coast, and city.
                   </p>
 
                   <div class="hero__actions" id="cta">
-                    <a href="#destinations" class="btn btn--primary">Explore Places</a>
-                    <a href="#cta" class="btn btn--ghost">Book a Taxi</a>
+                    <a href="#cta" class="btn btn--primary">
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                      Book a Taxi
+                    </a>
+                    <a href="#destinations" class="btn btn--ghost">Explore Places</a>
                   </div>
                 </div>
               </div>
 
-              <button class="fab" type="button" aria-label="Quick action">+</button>
+              <button class="fab fab--taxi" type="button" aria-label="Book a taxi">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11M8.5 17.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm7 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </button>
             </section>
 
-            <!-- Style 2: memory scatter — Cambodia moments -->
+            <!-- Style 2: memory scatter — Cambodia moments + taxi cues -->
             <section class="hero hero--style-2" data-hero-panel="2" aria-label="Hero style 2" hidden>
               <header class="site-header site-header--light">
-                <a href="#" class="logo logo--cobra" aria-label="CobraTaxi Cambodia home">CobraTaxi</a>
+                <a href="#" class="wordmark wordmark--dark" aria-label="CobraTaxi home">CobraTaxi</a>
                 <nav class="desktop-nav" aria-label="Primary">
                   <a href="#memory-cta">Places</a>
                   <a href="#memory-cta">Taxi</a>
@@ -179,7 +208,7 @@
                 <a href="#memory-cta">Places</a>
                 <a href="#memory-cta">Taxi Service</a>
                 <a href="#memory-cta">Tour Guide</a>
-                <a href="#memory-cta" class="mobile-menu__cta">Book a Ride</a>
+                <a href="#memory-cta" class="mobile-menu__cta">Book a Taxi</a>
               </div>
 
               <div class="memory">
@@ -223,18 +252,37 @@
                     <img src="assets/cambodia/temple-gate.jpg" alt="" />
                     <figcaption>Ancient gate</figcaption>
                   </figure>
+
+                  <div class="memory-chip" style="--x: 42%; --y: 14%; --r: -6deg; --delay: 0.2s" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <span>Private taxi</span>
+                  </div>
+                  <div class="memory-chip memory-chip--hide-sm" style="--x: 48%; --y: 72%; --r: 5deg; --delay: 0.35s" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M8 12l-2 4h3l1.2-2.4M16 12l2 4h-3l-1.2-2.4M7 12V8.8A1.8 1.8 0 0 1 8.8 7h6.4A1.8 1.8 0 0 1 17 8.8V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>Airport pickup</span>
+                  </div>
                 </div>
 
                 <div class="memory__copy">
                   <p class="memory__eyebrow">Moments on the road</p>
                   <h1>Cambodia, one ride at a time</h1>
                   <p>
-                    Temple mornings, coastal evenings, city transfers — real places
-                    first. Then a personal driver who knows the way.
+                    Temple mornings and coastal evenings — then a personal driver
+                    for transfers, day trips, and guided routes.
                   </p>
+                  <ul class="service-pills service-pills--compact" aria-label="Main services">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                      Taxi
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.5 0-6.5 1.8-6.5 4v1.5h13V18c0-2.2-3-4-6.5-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                      Guide
+                    </li>
+                  </ul>
                   <div class="hero__actions" id="memory-cta">
-                    <a href="#memory-cta" class="btn btn--primary">See Places</a>
-                    <a href="#memory-cta" class="btn btn--ghost">Request a Guide</a>
+                    <a href="#memory-cta" class="btn btn--primary">Book a Taxi</a>
+                    <a href="#memory-cta" class="btn btn--ghost">See Places</a>
                   </div>
                 </div>
               </div>
@@ -258,7 +306,7 @@
               </div>
 
               <header class="site-header site-header--serious">
-                <a href="#" class="logo logo--cobra" aria-label="CobraTaxi Cambodia home">CobraTaxi</a>
+                <a href="#" class="wordmark" aria-label="CobraTaxi home">CobraTaxi</a>
                 <nav class="desktop-nav" aria-label="Primary">
                   <a href="#serious-cta">Places</a>
                   <a href="#serious-cta">Taxi</a>
@@ -276,14 +324,14 @@
                 <a href="#serious-cta">Places</a>
                 <a href="#serious-cta">Taxi Service</a>
                 <a href="#serious-cta">Tour Guide</a>
-                <a href="#serious-cta" class="mobile-menu__cta mobile-menu__cta--sharp">Book a Ride</a>
+                <a href="#serious-cta" class="mobile-menu__cta mobile-menu__cta--sharp">Book a Taxi</a>
               </div>
 
               <div class="serious__stage">
                 <div class="serious__content">
                   <div class="serious__kicker">
                     <span class="serious__rule" aria-hidden="true"></span>
-                    <p class="serious__eyebrow">Personal taxi &amp; tour guide · Cambodia</p>
+                    <p class="serious__eyebrow">Personal taxi service · Cambodia</p>
                   </div>
 
                   <h1>
@@ -293,18 +341,30 @@
                   </h1>
 
                   <ul class="serious__meta">
-                    <li>Airport transfers</li>
-                    <li>Temple days</li>
-                    <li>Coastal trips</li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16h16M7 16l1-4h8l1 4M9 12V9.5A1.5 1.5 0 0 1 10.5 8h3A1.5 1.5 0 0 1 15 9.5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      Airport transfers
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.5"/></svg>
+                      Temple day trips
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16M6 12l3 6h2l-1.5-3H14.5L13 18h2l3-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      Point-to-point taxi
+                    </li>
                   </ul>
 
                   <p class="serious__lede">
-                    A personal service — not a big company. Years on Cambodia’s roads,
-                    guiding foreigners with clear prices and calm local knowledge.
+                    Cambodia’s places first — then a personal driver (not a company)
+                    for clear-price taxi rides and guided tours.
                   </p>
 
                   <div class="serious__actions" id="serious-cta">
-                    <a href="#serious-cta" class="btn-sharp btn-sharp--solid">Book a Taxi</a>
+                    <a href="#serious-cta" class="btn-sharp btn-sharp--solid">
+                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 17h14M7 17l1.2-4.5A2 2 0 0 1 10.1 11h3.8a2 2 0 0 1 1.9 1.5L17 17M8 11V8.5A1.5 1.5 0 0 1 9.5 7h5A1.5 1.5 0 0 1 16 8.5V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                      Book a Taxi
+                    </a>
                     <a href="#serious-cta" class="btn-sharp btn-sharp--ghost">Ask for Tour Guide</a>
                   </div>
                 </div>
@@ -316,8 +376,8 @@
                       alt="Ta Prohm temple in Angkor"
                     />
                     <figcaption>
-                      <span>Signature route</span>
-                      <strong>Siem Reap · Angkor</strong>
+                      <span>Popular taxi route</span>
+                      <strong>Airport → Angkor</strong>
                     </figcaption>
                   </figure>
                   <p class="serious__quote">
@@ -328,11 +388,11 @@
               </div>
 
               <div class="serious__bar">
-                <p>cobrataxicambodia.com · Personal service</p>
+                <p>Personal taxi · cobrataxicambodia.com</p>
                 <div class="serious__stats">
-                  <span><b>1</b> trusted driver</span>
+                  <span><b>Taxi</b> main</span>
+                  <span><b>Guide</b> extra</span>
                   <span><b>3</b> key places</span>
-                  <span><b>Taxi</b> + guide</span>
                 </div>
               </div>
             </section>
